@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:hyman="http://schemas.android.com/apk/res-auto"
 
     android:orientation="vertical"
     tools:context="com.cennac.cccrystal.MainActivity">
@@ -22,6 +23,53 @@
         android:layout_height="60dp"
         android:background="@drawable/tag_bg"
         >
+
+        <com.cennac.cccrystal.ChangeColorIconWithText
+            android:id="@+id/id_cciwt_one"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            hyman:text="测试"
+            hyman:icon="@mipmap/ic_menu_allfriends"
+            hyman:text_size="12sp"
+            hyman:color="#ff45c01a"/>
+
+
+
+        <com.cennac.cccrystal.ChangeColorIconWithText
+            android:id="@+id/id_cciwt_two"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            hyman:text="测试"
+            hyman:icon="@mipmap/ic_menu_allfriends"
+            hyman:text_size="12sp"
+            hyman:color="#ff45c01a"/>
+
+        <com.cennac.cccrystal.ChangeColorIconWithText
+            android:id="@+id/id_cciwt_three"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            hyman:text="测试"
+            hyman:icon="@mipmap/ic_menu_allfriends"
+            hyman:text_size="12sp"
+            hyman:color="#ff45c01a"/>
+
+        <com.cennac.cccrystal.ChangeColorIconWithText
+            android:id="@+id/id_cciwt_four"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            hyman:text="我"
+            hyman:icon="@mipmap/ic_menu_allfriends"
+            hyman:text_size="12sp"
+            hyman:color="#ff45c01a" />
+
     </LinearLayout>
 
 
