@@ -22,7 +22,6 @@
         android:layout_height="60dp"
         android:background="@drawable/tag_bg"
         >
-        <!--android:background="@drawable/tag_bg"-->
     </LinearLayout>
 
 
