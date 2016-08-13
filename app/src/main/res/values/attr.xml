@@ -5,7 +5,7 @@
     <attr name="text" format="string"></attr>
     <attr name="text_size" format="dimension"></attr>
 
-    <declare-styleable name="ChangeColorIconWithText">
+    <declare-styleable name="IconText">
         <attr name="icon"></attr>
         <attr name="color"></attr>
         <attr name="text"></attr>

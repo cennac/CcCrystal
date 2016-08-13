@@ -20,7 +20,7 @@ import android.view.View;
 /**
  * Created by Cennac on 16/8/12.
  */
-public class ChangeColorIconWithText extends View {
+public class IconText extends View {
 
         private int mColor = 0xFF45C01A;
         private Bitmap mIconBitmap;
@@ -38,12 +38,12 @@ public class ChangeColorIconWithText extends View {
         private Rect mTextBound;
         private Paint mTextPaint;
 
-        public ChangeColorIconWithText(Context context)
+        public IconText(Context context)
         {
             this(context, null);
         }
 
-        public ChangeColorIconWithText(Context context, AttributeSet attrs)
+        public IconText(Context context, AttributeSet attrs)
         {
             this(context, attrs, 0);
         }
@@ -55,13 +55,13 @@ public class ChangeColorIconWithText extends View {
          * @param attrs
          * @param defStyleAttr
          */
-        public ChangeColorIconWithText(Context context, AttributeSet attrs,
-                                       int defStyleAttr)
+        public IconText(Context context, AttributeSet attrs,
+                        int defStyleAttr)
         {
             super(context, attrs, defStyleAttr);
 
             TypedArray a = context.obtainStyledAttributes(attrs,
-                    R.styleable.ChangeColorIconWithText);
+                    R.styleable.IconText);
 
             int n = a.getIndexCount();
 
@@ -70,17 +70,17 @@ public class ChangeColorIconWithText extends View {
                 int attr = a.getIndex(i);
                 switch (attr)
                 {
-                    case R.styleable.ChangeColorIconWithText_icon:
+                    case R.styleable.IconText_icon:
                         BitmapDrawable drawable = (BitmapDrawable) a.getDrawable(attr);
                         mIconBitmap = drawable.getBitmap();
                         break;
-                    case R.styleable.ChangeColorIconWithText_color:
+                    case R.styleable.IconText_color:
                         mColor = a.getColor(attr, 0xFF45C01A);
                         break;
-                    case R.styleable.ChangeColorIconWithText_text:
+                    case R.styleable.IconText_text:
                         mText = a.getString(attr);
                         break;
-                    case R.styleable.ChangeColorIconWithText_text_size:
+                    case R.styleable.IconText_text_size:
                         mTextSize = (int) a.getDimension(attr, TypedValue
                                 .applyDimension(TypedValue.COMPLEX_UNIT_SP, 12,
                                         getResources().getDisplayMetrics()));
