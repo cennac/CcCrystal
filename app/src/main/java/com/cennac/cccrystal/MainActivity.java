@@ -33,11 +33,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initDatas() {
-        for (String title : mTitles)
-        {
+//        for (String title : mTitles)
+        for (int i=0;i<mTitles.length-1;i++)
+        {	String title = mTitles[i];
             BlankFragment tabFragment =BlankFragment.newInstance(title,title);
             mTabs.add(tabFragment);
         }
+        UserFragment userFragment=UserFragment.newInstance("","");
+        mTabs.add(userFragment);
 
         mAdapter = new FragmentPagerAdapter(getSupportFragmentManager())
         {
