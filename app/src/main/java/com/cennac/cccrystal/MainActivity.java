@@ -28,6 +28,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        initDatas();
+        mViewPager.setAdapter(mAdapter);
+    }
+
+    private void initDatas() {
+        for (String title : mTitles)
+        {
+            BlankFragment tabFragment =BlankFragment.newInstance(title,title);
+            mTabs.add(tabFragment);
+        }
+
+        mAdapter = new FragmentPagerAdapter(getSupportFragmentManager())
+        {
+
+            @Override
+            public int getCount()
+            {
+                return mTabs.size();
+            }
+
+            @Override
+            public Fragment getItem(int position)
+            {
+                return mTabs.get(position);
+            }
+        };
     }
 
     private void initView() {
@@ -78,19 +104,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             case R.id.id_cciwt_one:
                 mTabIndicators.get(0).setIconAlpha(1.0f);
-//                mViewPager.setCurrentItem(0, false);
+                mViewPager.setCurrentItem(0, false);
                 break;
             case R.id.id_cciwt_two:
                 mTabIndicators.get(1).setIconAlpha(1.0f);
-//                mViewPager.setCurrentItem(1, false);
+                mViewPager.setCurrentItem(1, false);
                 break;
             case R.id.id_cciwt_three:
                 mTabIndicators.get(2).setIconAlpha(1.0f);
-//                mViewPager.setCurrentItem(2, false);
+                mViewPager.setCurrentItem(2, false);
                 break;
             case R.id.id_cciwt_four:
                 mTabIndicators.get(3).setIconAlpha(1.0f);
-//                mViewPager.setCurrentItem(3, false);
+                mViewPager.setCurrentItem(3, false);
                 break;
         }
     }
